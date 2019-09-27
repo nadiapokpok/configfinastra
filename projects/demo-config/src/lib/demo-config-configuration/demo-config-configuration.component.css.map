@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "demo-config-configuration.component.scss"
+    ],
+    "names": [],
+    "file": "demo-config-configuration.component.css"
+}

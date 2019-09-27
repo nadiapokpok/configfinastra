@@ -1,0 +1,262 @@
+$defaultText : grey;
+@mixin checkSize {
+    height: 17px;
+    width: 17px;
+    margin-left:3%;
+}
+
+*{
+    padding:0;
+    margin: 0;
+  
+    
+}
+form{
+    width: 31vw;//37
+
+   //background-color: rgb(46, 40, 45);
+
+#titre{
+    background-color: 	#7F6BC1;
+ 
+    h1{
+       //color:white;
+       color: black;
+      padding: 0.5%;
+        font-weight: 500;
+        background-color: 	#7F6BC1;
+    }
+}
+
+
+h3{
+    margin-left: 43%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: black; 
+   
+}
+
+
+
+ #line1{
+    display: flex;
+    
+    
+    label{
+        margin-left: 1%;
+        color: rgb(0, 0, 0);
+    }
+    p{
+        margin-left: 107%;
+    }
+   select{
+        margin-left: 81.3%;
+        width: 235%;
+
+    } 
+     
+}
+#line2{
+    display: flex;
+    margin-top: 1%;
+    
+    label{
+        margin-left: 1%;
+    }
+    p{
+        margin-left: 67%;
+
+    } 
+
+    #calendrier{
+        display: flex;
+    
+     
+    }
+   
+    #date{
+    margin-left: 27%;
+    width: 17vw;
+    margin-top: -1%;
+    box-shadow: inset 0.1px 0.1px #83888D;
+    border-radius: 3px;
+    }  
+ 
+}
+#line3{
+    display: flex;
+    margin-top: 1%;
+  
+  
+
+    label{
+        margin-left: 1%;
+    }
+   /*  #risk{
+        border: 3px solid; */
+
+    #liste{
+        margin-left:11%;
+     
+      
+       
+        //width:51vw;
+        margin-top: -0.2%;
+    }   
+    p{
+        margin-left:23%;
+        width: 13vw;
+        
+    } 
+    }   
+       
+    
+   
+  
+    
+       
+   
+        
+      
+  
+
+#line4{
+    display: flex;
+    margin-top: 1%;
+    label{
+        margin-left: 1%;
+    }
+    #position2{
+        display: flex;
+    }
+    #position1{
+        margin-left: 11%;
+        border-radius: 3px;
+        width:7vw;
+    }
+    #pourcentage{
+        margin-left: 3%;
+    }
+  
+    p{
+        margin-left: 29%;
+    }
+
+}
+#line5{
+    display: flex;
+    margin-top: 1%;
+    label{
+        margin-left: 1%;
+    }
+    #position3{
+        margin-left: 50%;
+        width:6vw;
+        border-radius: 3px;
+    }
+    p{
+        margin-left: 59%;
+    }
+
+}
+#line6{
+    display: flex;
+    margin-top: 1%;
+    
+    label{
+        margin-left: 1%;
+    }
+    select{
+        margin-left:74.3%;
+        width: 135%;
+    }
+    p{
+        margin-left: 105%;
+
+    } 
+     
+}
+#line7{
+    display: flex;
+    margin-top: 1%;
+    
+    label{
+        margin-left: 1%;
+    }
+    select{
+        margin-left: 51%;
+        width: 135%;
+    }
+  
+  
+    p{
+        margin-left: 77%
+    }
+     
+}
+#bloc3{
+    margin-top: 1%;
+    .check1{
+        margin-left: 37%;
+    }
+    
+    #risk{
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-left: 1%;
+    }
+}
+
+#line9{
+    display: flex;
+    margin-top: 1%;
+select{
+    margin-left: 41%;
+    width: 235%;
+}
+p{
+    margin-left: 51%;
+}
+}
+
+#btnfooter{
+    padding-top: 1%;
+    padding-bottom: 0.7%;
+    margin-top:2%;
+    background-color:	#7F6BC1;
+    display: flex;
+    width: 100%;
+   
+#btn1, #btn2{
+    padding: 0% 2%; 
+    border-radius: 3px;
+}
+#btn1{
+    margin-left: 63%;
+}
+#btn2{
+    margin-left: 1.5%;
+}
+}   
+
+
+
+/*select option{
+    background-color: aquamarine;
+}*/
+
+.para{
+    color: $defaultText;
+}
+.check{
+    @include checkSize;
+   
+}
+select{
+    border-radius: 3px;
+    //box-shadow: inset 2px 2px 2px gray;
+    border-left: gray 2px solid;
+    border-top: gray 2px solid;
+}
+}

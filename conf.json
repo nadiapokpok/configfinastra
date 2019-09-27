@@ -1,0 +1,8 @@
+{
+    "appName": "demo-app",
+    "port": 3002,
+    "client": "./",
+    "indexCaching": true,
+    "packagePath": "mb-package.json",
+    "target": "dist/demo"
+}

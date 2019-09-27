@@ -1,0 +1,161 @@
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div id="titre">
+            <h1>Configuration</h1>
+          </div>
+          <!--<form method="GET" action=''>-->
+    <div id="bloc1">
+      <h3>Data</h3>
+        <div id="line1">
+          <mat-checkbox formControlName="plset" class="check"  (change)="toggleVisibilityUn()"></mat-checkbox>
+           <!-- <input class="check" id="P&L Set :" name="P&L Set :" type="checkbox" (change)="toggleVisibilityUn($event)"> -->
+  
+            <label for="P&L Set :">P&L Set:</label>  
+        <div *ngIf='checkedUn'>
+          <select formControlName="plset" id="test" >
+            <option value="sacapuce" selected>Sacapuce</option>
+            <option value="debilus">Debilus</option>
+            <option value="griotte">Griotte</option>
+            <option value="whisper">Whisper</option>
+        </select>
+        </div> 
+        <div *ngIf='!checkedUn'><p class="para">Sacapuce</p></div>
+           
+        </div>
+          
+               
+       
+        <div id="line2">
+            <mat-checkbox formControlName="mtm" class="check"  (change)="toggleVisibilityDeux()"></mat-checkbox>
+          <!--<input type="checkbox" class="check" id="MtM Date :" name="MtM Date :" (change)="toggleVisibilityDeux($event)"> -->
+          <label for="MtM Date :">MtM Date :</label>  
+          <div id="calendrier" *ngIf='checkedDeux'>
+            
+               <!--<mat-form-field>
+                  <input matInput  [matDatepicker]="dp" placeholder="Choose a date">
+                  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                  <mat-datepicker #dp></mat-datepicker>
+                </mat-form-field>
+             <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>-->
+                
+                
+          <input formControlName="mtm" id="date" type="date" name="mtm">
+
+          </div>
+          <div *ngIf='!checkedDeux'><p class="para">01/01/2019</p></div>
+        </div>
+          
+      <div id="line3">
+          <mat-checkbox formControlName="riskclasses" class="check"  (change)="toggleVisibilityTrois()"></mat-checkbox>
+         <!--<input type="checkbox" class="check"  id="Risk Classes :" name="Risk Classes :" (change)="toggleVisibilityTrois($event)" > --> 
+          <label id="risk" for="Risk Classes :">Risk Classes:</label>  
+          <div  id="liste" *ngIf='checkedTrois'>
+              <mat-checkbox formControlName="riskclasses" [checked]=true></mat-checkbox>EQ-SPOT
+              <mat-checkbox formControlName="riskclasses" [checked]=true></mat-checkbox>FX
+              <mat-checkbox formControlName="riskclasses" [checked]=true></mat-checkbox>IR
+              <mat-checkbox formControlName="riskclasses" [checked]=true></mat-checkbox>TOTAL
+            <!--<input type="checkbox" class="check"  checked> EQ-SPOT
+            <input type="checkbox" class="check"  checked> FX
+            <input type="checkbox" class="check"  checked> IR
+            <input type="checkbox" class="check"  checked> TOTAL-->
+          </div>
+          <div *ngIf='!checkedTrois'><p class="para">TOTAL;EQ-SPOT;FX;IR</p></div>
+       </div>
+
+     
+      </div>
+  <div id="bloc2">
+      <h3>VaR</h3>
+        <div id="line4">
+            <mat-checkbox formControlName="confidencelevel" class="check"  (change)="toggleVisibilityQuatre()"></mat-checkbox>
+          <!--<input type="checkbox"class="check" id="Confidence Level :" name="Confidence Level :"  (change)="toggleVisibilityQuatre($event)"> -->
+          <label for="Confidence Level :">Confidence Level:</label>  
+            <div id="position2" *ngIf='checkedQuatre'>
+              <input  type="number" value= "99"  id="position1"  name="quantity" min="0" max="100"> 
+              <p id="pourcentage">%</p>
+            </div>
+          <div *ngIf='!checkedQuatre'><p class="para">99%</p></div>
+        </div>
+        <div id="line5">
+            <mat-checkbox formControlName="decayfactor" class="check"  (change)="toggleVisibilityCinq()"></mat-checkbox>
+          <!--<input type="checkbox" class="check" id="Decay Factor :" name="Decay Factor :" (change)="toggleVisibilityCinq($event) ">-->
+          <label for="Decay Factor :">Decay Factor:</label>
+            <div *ngIf='checkedCinq'>
+              <input formControlName="decayfactor" type="number" id="position3" step=".00001" name="quantity" min="0" max="100">
+            </div> 
+          <div *ngIf='!checkedCinq'><p class="para">Disabled</p></div>
+        </div>
+      
+        <div id="line6">
+            <mat-checkbox formControlName="vartype" class="check"  (change)="toggleVisibilitySix()"></mat-checkbox>
+          <!--<input type="checkbox"  class="check" id="Var Type :" name="Var Type :" (change)="toggleVisibilitySix($event)">-->  
+          <label for="Var Type :" >Var Type:</label>
+        <div *ngIf='checkedSix'>
+          <select formControlName="vartype" >
+            <option value="sacapuce">Sacapuce</option>
+            <option value="debilus">Debilus</option>
+            <option value="griotte">Griotte</option>
+            <option value="whisper">Whisper</option>
+        </select>
+        </div> 
+        <div *ngIf='!checkedSix'><p class="para">Standard</p></div>
+           
+        </div>
+        <div id="line7">
+            <mat-checkbox formControlName="tailmethod" class="check"  (change)="toggleVisibilitySept()"></mat-checkbox>
+          <!--<input type="checkbox" class="check" id="Tail Method :" name="Tail Method :" (change)="toggleVisibilitySept($event)">-->
+          <label for="Tail Method :">Tail Method:</label>  
+        <div *ngIf='checkedSept'>
+          <select formControlName="tailmethod">
+            <option value="sacapuce">Sacapuce</option>
+            <option value="debilus">Debilus</option>
+            <option value="griotte">Griotte</option>
+            <option value="whisper">Whisper</option>
+        </select>
+        </div> 
+        <div *ngIf='!checkedSept'><p class="para">Quantile</p></div>
+        </div>  
+        </div>
+      <div id="bloc3">
+          <mat-checkbox formControlName="riskfactorseffect" class="check1"  (change)="toggleVisibilityHuit()"></mat-checkbox>
+        <!--<input type="checkbox" class="check" id="Risk Factors Effect:" name="Risk Factors Effect :" (change)="toggleVisibilityHuit($event)">-->
+        <label id="risk" for="Risk Factors Effect :">Risk Factors Effect: </label>
+        <div *ngIf='checkedHuit'>
+          <div id="line9">
+              <mat-checkbox formControlName="sensitivityset"  class="check"  (change)="toggleVisibilityNeuf()"></mat-checkbox>
+            <!--<input type="checkbox"  class="check" (change)="toggleVisibilityNeuf($event)"> Sensitivity set :-->
+            <label for="Sensitivity Set:">Sensitivity Set:</label>
+            <div  *ngIf='checkedNeuf'>
+                <select>
+                    <option value="sacapuce">Sacapuce</option>
+                    <option value="debilus">Debilus</option>
+                    <option value="griotte">Griotte</option>
+                    <option value="whisper">Whisper</option>
+                </select>
+            </div>
+         
+            <div *ngIf='!checkedNeuf'><p class="para">Sacapuce</p></div>
+          </div>
+        </div>
+        <div *ngIf='!checkedHuit'></div>
+      </div>
+      <div id="btnfooter">
+        <button mat-raised-button color="accent" id="btn1" (click)="onSubmit()">Apply</button>
+        <button mat-raised-button color="accent" id="btn2" (click)="onReset()">Reset</button>
+      </div>
+      <!--<button type="submit" (click)="onSubmit()">Apply</button>
+      <button type="reset" (click)="onReset()">Cancel</button>
+      <button type="submit">Cancel</button>-->
+  
+      
+</form>
+     
+    
+      
+
+
+

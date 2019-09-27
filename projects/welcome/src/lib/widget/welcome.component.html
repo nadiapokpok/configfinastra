@@ -1,0 +1,38 @@
+<div class="component-container">
+  
+  <p class="uxg-body-1">Welcome</p>
+  <h5 class="uxg-h3">{{user}}</h5>
+  <div class="component-container-body">
+    <ul class="component-container-list" 
+        *ngIf="tiles$ | async as tiles else noData">
+      <li class="component-container-list-item" *ngFor="let tile of tiles">
+        <mat-card class="uxg-card-product" dense>
+          <span class="uxg-h4 uxg-card-product-name">{{tile.color | appName:3}}</span>
+        </mat-card>
+        <h5 class="uxg-subtitle-4">{{tile.color}}</h5>
+      </li>
+    </ul>
+    <ng-template #noData>No Data Available</ng-template>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="component-container-right">
+      <h5 class="uxg-h6">GETTING STARTED</h5>
+
+      <div class="getting-started-corner-wrapper">
+        <iframe class="getting-started-video" width="224" height="126" 
+        src="https://www.youtube.com/embed/M4tCQktdXoo" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </div>
+
+      <mat-list>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon color="primary" mat-list-icon>{{folder.icon}}</mat-icon>
+          <h5 class="uxg-subtitle-4" mat-line>{{folder.name}}</h5>
+          <p class="uxg-body-4" mat-line> {{folder.updated}} </p>
+        </mat-list-item>
+      </mat-list>
+
+    </div>
+  </div>
+</div>

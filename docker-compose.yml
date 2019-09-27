@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  uxp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./data:/ui/data
+      - ./mb-package.json:/ui/mb-package.json
+    ports:
+      - 3002:3002
+    env_file: .env
+    

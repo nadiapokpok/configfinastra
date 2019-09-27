@@ -1,0 +1,29 @@
+{
+  "name": "demo-config",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
+  }, 
+  "displayName": "demo config", 
+  "keywords": [
+    "uxp-extension"        
+  ],
+  "uxp": {                   
+    "moduleName": "DemoConfigModule",
+    "componentName": "DemoConfigComponent",
+    "icon": "icon path...",
+    "component" : {
+      "in": [
+
+      ],
+      "out": [
+
+      ],
+      "attribute":{
+     
+    }
+  }
+}
+}
+  

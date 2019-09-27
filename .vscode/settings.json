@@ -1,0 +1,11 @@
+{
+    "debug.node.autoAttach": "on",
+    "peacock.affectActivityBar": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1accff",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#2900df",
+        "activityBarBadge.foreground": "#e7e7e7"
+    }
+}
