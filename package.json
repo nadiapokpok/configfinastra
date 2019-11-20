@@ -40,7 +40,7 @@
     "@uxp/server": "2.1.0",
     "@uxp/server-flow-editor": "2.1.0",
     "@uxp/setting": "2.1.0",
-    "angular": "1.5.7",
+    "angular": "1.7.9",
     "angular-animate": "1.5.7",
     "angular-aria": "1.5.7",
     "angular-cookies": "1.5.7",
